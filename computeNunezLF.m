@@ -1,4 +1,4 @@
-function [Kn,Khomn,Khom,Kr] = computeNunezLF( K,LFisNormal,VertNorms,VoxelCoord,Channels)
+function [Kn,Khomn,Khom,Kr,M,angle] = computeNunezLFthetaR( K,LFisNormal,VertNorms,VoxelCoord,Channels)
 % this function computed homogenous lead field using cortex and channel
 % information of test lead field
 % Input:
@@ -37,7 +37,16 @@ VoxelCoord=permute(VoxelCoord,[2 1]);
 VoxelCoord=reshape(VoxelCoord,1,Nv,3);
 R=repmat(Channels,1,Nv,1)-repmat(VoxelCoord,Ne,1,1);
 %% Compute Nunez Homogenous Media Leadfield 
-Khom=sum(VertNorms.*R,3)./(sqrt(sum(R.^2,3)).^3);
+M = sqrt(sum(R.^2,3));
+M = M./(max(M(:)));
+sc = sum(VertNorms.*R,3);
+angle = acos(sc./M);
+angle(imag(angle) ~= 0) = 0;
+% Khom=sc./(M.^3);
+%% compute adjusted homogeneous LF
+idx = M<0.15;
+M(idx) = 0.15;
+Khom=sc./(M.^3);
 %% Applying Average Reference and normalizing
 Khomn=H*Khom;
 Kn=H*Kn;
