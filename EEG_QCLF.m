@@ -1,5 +1,5 @@
 function [K,Kn,Khomn,Khom,corelv,corelch,ChannelPos] = EEG_QCLF(cortex,LF,Loc)
-% this function computes computed channel and voxel correlations
+% this function computes CSP and SSP
 % between homogeneous and test LFs
 % Input:
 %       K= lead field gain plot
