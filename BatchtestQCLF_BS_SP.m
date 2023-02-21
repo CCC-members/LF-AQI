@@ -1,5 +1,5 @@
 % This script computes the AQI for files saved in BrainStorm format
-% In this case there will be multiple BrainStorm Protocols
+% In this case there will be Single BrainStorm Protocols
 % Folders contain files  for LF, Channel Coordinates, BEM cortex 
 % and Head 
 
