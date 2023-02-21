@@ -1,5 +1,5 @@
 function [] = view3D_K(Ke,cortex,channels,head,elecIndex)
-% this function computes the 3D gain plot of a specfic channel
+% this function computes the LFVP plot of a specfic channel
 % from EEG lead field. The lead field should not be projected to normal
 % Input:
 %       Ke = LF in XYZ coordinates

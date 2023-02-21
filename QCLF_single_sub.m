@@ -1,4 +1,4 @@
-% This script uses different functions for QCLF to compute and plot
+% This script uses different functions for LF-AQI to compute and plot
 % correlations for channels and voxels. It also plots 3D gain for a 
 % specific channel
 % File paths for LF, Channel Coordinates, BEM cortex and Head are given

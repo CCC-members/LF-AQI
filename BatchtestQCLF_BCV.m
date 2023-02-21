@@ -1,4 +1,4 @@
-% This script computes the AQI for files saved in BC-VARETA format
+% This script computes the LF-AQI for files saved in BC-VARETA format
 % Folders contain files  for LF, Channel Coordinates, BEM cortex 
 % and Head 
 

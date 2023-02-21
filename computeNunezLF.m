@@ -1,4 +1,4 @@
-function [Kn,Khomn,Khom,Kr,M,angle] = computeNunezLFthetaR( K,LFisNormal,VertNorms,VoxelCoord,Channels)
+function [Kn,Khomn,Khom,Kr,M,angle] = computeNunezLF( K,LFisNormal,VertNorms,VoxelCoord,Channels)
 % this function computed homogenous lead field using cortex and channel
 % information of test lead field
 % Input:
